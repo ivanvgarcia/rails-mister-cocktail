@@ -59,7 +59,7 @@ gem 'rspec-rails', group: [ :test ]
 gem 'rails-controller-testing', group: [ :test ]
 
 gem 'autoprefixer-rails'
-gem 'font-awesome-sass', '~> 5.0.9'
+gem 'font-awesome-rails'
 gem 'simple_form'
 gem 'faker'
 gem 'better_errors'

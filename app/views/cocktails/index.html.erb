@@ -1,0 +1,35 @@
+<section class="hero is-small is-primary is-bold">
+  <div class="hero-body">
+    <div class="container ">
+      <h1 class="title has-text-dark">
+        Cocktails 
+      </h1>
+      <h2 class="subtitle has-text-dark">
+        Find the best cocktails in the world
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered is-multiline">
+      <% @cocktails.each do |cocktail| %>
+        <div class="column is-4">
+          <div class="card">
+            <%= image_tag cocktail.image_url %>
+  
+            <div class="card-body">
+             <%= cocktail.name %>
+            <%= button_to 'See it', cocktail_path(cocktail) %>
+            
+            </div>
+           
+          </div>
+        </div>
+      <% end %>
+  </div>
+</div>
+
+</section>
+

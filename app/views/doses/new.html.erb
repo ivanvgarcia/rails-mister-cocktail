@@ -1,0 +1,31 @@
+<section class="hero is-small is-primary is-bold">
+  <div class="hero-body">
+    <div class="container ">
+      <h1 class="title has-text-dark">
+        Add a new <span class="title-text">dose</span>
+      </h1>
+    </div>
+  </div>
+</section>
+
+<div class="section">
+  <div class="container">
+    <%= simple_form_for [@cocktail, @dose], html: { class: '' } do |f| %>
+    <div class="">
+      <div class="">
+        <%= f.input :description, label_html: { class: "" }, input_html: {
+        class: "" } %>
+      </div>
+
+      <div class="">
+        <%= f.association :ingredient, collection: @ingredients, prompt: "Choose
+        an ingredient..." %>
+      </div>
+
+      <div class="">
+        <%= f.submit "Add Ingredient", class: "" %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>

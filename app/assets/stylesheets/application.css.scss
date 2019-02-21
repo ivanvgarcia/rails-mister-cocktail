@@ -12,6 +12,28 @@
  *
  *= require_tree .
  *= require_self
+
  */
 
+$yellow: #fff549;
+$grey: #8d99ae;
+$black: #04151f;
+$white: #f5efed;
+
+$primary: $yellow;
+$light: $white;
+$link: $grey;
+$dark: $black;
+
+// $blue: #72d0eb;
+// $pink: #ffb3b3;
+// $pink-invert: #fff;
+// $family-serif: 'Merriweather', 'Georgia', serif;
+// $primary: $pink;
+// $primary-invert: $pink-invert;
+// $family-primary: $family-serif;
+
 @import 'bulma';
+
+@import 'font-awesome';
+@import 'components/index';

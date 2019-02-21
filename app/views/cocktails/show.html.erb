@@ -1,0 +1,15 @@
+<section class="hero is-small is-primary is-bold">
+  <div class="hero-body">
+    <div class="container ">
+      <h1 class="title has-text-dark">
+        Make a <span class="title-text"><%= @cocktail.name %></span>
+      </h1>
+    </div>
+  </div>
+</section>
+
+<% @cocktail.doses.each do |dose| %>
+  <%= dose.description %>
+  <%= dose.ingredient.name %>
+  <%= link_to 'delete', dose_path(dose), method: 'delete' %>
+<% end %>

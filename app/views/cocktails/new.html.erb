@@ -1,0 +1,21 @@
+<section class="hero is-small is-primary is-bold">
+  <div class="hero-body">
+    <div class="container ">
+      <h1 class="title has-text-dark">
+        Add a new <span class="title-text">cocktail</span>
+      </h1>
+    </div>
+  </div>
+</section>
+
+<div class="section">
+  <div class="container">
+    <%= simple_form_for @cocktail, html: { class: 'form' } do |f| %>
+    <div class="field">
+      <%= f.input :name, label_html: { class: "label" }, input_html: { class: ""
+      } %> <%= f.input :image_url, label_html: { class: "label" }, input_html: {
+      class: "" } %> <%= f.submit "Add", class: "button is-dark is-fullwidth" %>
+    </div>
+    <% end %>
+  </div>
+</div>

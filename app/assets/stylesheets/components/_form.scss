@@ -1,0 +1,30 @@
+.simple_form .input {
+  border: none;
+  box-shadow: none;
+}
+
+.label {
+  font-weight: 300;
+  min-width: 20%;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.label:not(:last-child) {
+  margin: 0;
+}
+
+.cocktail_name,
+.cocktail_image_url {
+  padding: 40px 0;
+}
+
+#cocktail_name,
+#cocktail_image_url {
+  border: 1px solid #000;
+  width: 80%;
+  padding-left: 10px;
+  border-radius: 0.5rem;
+  height: 30px;
+}

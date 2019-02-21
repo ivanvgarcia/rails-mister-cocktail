@@ -1,0 +1,14 @@
+$yellow: #fff549;
+$grey: #8d99ae;
+$black: #04151f;
+$white: #f5efed;
+
+@import 'form';
+@import 'logo';
+@import 'card';
+
+.title-text {
+  padding: 1rem;
+  background: $black;
+  color: $yellow;
+}
