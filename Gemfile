@@ -65,3 +65,6 @@ gem 'faker'
 gem 'better_errors'
 gem 'binding_of_caller'
 gem "bulma-rails", "~> 0.7.4"
+gem 'dotenv-rails', groups: [:development, :test]
+gem 'cloudinary', '~> 1.9.1'
+
