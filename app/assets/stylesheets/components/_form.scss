@@ -15,10 +15,6 @@
   margin: 0;
 }
 
-select::-ms-expand {
-  display: none;
-}
-
 .cocktail_name,
 .dose_description,
 .dose_ingredient,
@@ -37,7 +33,7 @@ select::-ms-expand {
 #cocktail_image_url {
   border: 1px solid #000;
   width: 80%;
-  padding-left: 10px;
+  margin-left: 30px;
   border-radius: 0.5rem;
   height: 30px;
   font-size: 20px;

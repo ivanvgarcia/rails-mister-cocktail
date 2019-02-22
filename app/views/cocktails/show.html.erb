@@ -13,14 +13,17 @@
     <div class="column is-half">
       <%= cl_image_tag @cocktail.photo %>
     </div>
-    <div class="column is-half">
-      <%= link_to 'Add a Dose', new_cocktail_dose_path(@cocktail) %>
+    <div class="column is-half cocktail-show__dose center-content">
+      <div class="cocktail-show__list">
+       <% @cocktail.doses.each do |dose| %>
+        <%= dose.description %>
+        <%= dose.ingredient.name %>
+        <%= link_to 'delete', dose_path(dose), method: 'delete' %>
+      <% end %>
+      </div>
+   
+      <%= link_to 'Add a Dose', new_cocktail_dose_path(@cocktail), class: "button" %>
     </div>
   </div>
 </section>
 
-<% @cocktail.doses.each do |dose| %>
-  <%= dose.description %>
-  <%= dose.ingredient.name %>
-  <%= link_to 'delete', dose_path(dose), method: 'delete' %>
-<% end %>
