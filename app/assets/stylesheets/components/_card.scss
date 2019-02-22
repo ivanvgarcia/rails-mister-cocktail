@@ -7,6 +7,9 @@ $white: #f5efed;
   position: relative;
   background: $black;
   margin: 20px;
+  opacity: 0;
+  transform: translateX(-200px);
+  animation: slidein 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
 }
 
 .card-icon {
@@ -59,5 +62,12 @@ $white: #f5efed;
     font-family: 'coiny', Helvetica;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+  }
+}
+
+@keyframes slidein {
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
