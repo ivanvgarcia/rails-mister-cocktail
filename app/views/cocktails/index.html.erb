@@ -20,9 +20,12 @@
             <%= image_tag cocktail.image_url %>
   
             <div class="card-body">
-             <%= cocktail.name %>
-            <%= button_to 'See it', cocktail_path(cocktail) %>
-            
+              <div class="card-title">
+                <%= cocktail.name %>
+              </div>
+              <div>
+              <%= link_to 'See it', cocktail_path(cocktail), class: "button is-primary has-text-dark" %>
+              </div>
             </div>
            
           </div>
