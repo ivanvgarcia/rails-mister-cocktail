@@ -27,6 +27,11 @@ $white: #f5efed;
   transform: rotate(10deg) translateY(-50px);
 }
 
+.card:hover .card-button {
+  transform: translateY(0);
+  visibility: visible;
+}
+
 .card-body {
   position: absolute;
   left: 0px;
@@ -39,4 +44,20 @@ $white: #f5efed;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-direction: column;
+}
+
+.card-button {
+  justify-self: stretch;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(40%);
+  transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  visibility: hidden;
+  & .button {
+    border-radius: 0;
+    font-family: 'coiny', Helvetica;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
 }

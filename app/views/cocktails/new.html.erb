@@ -10,16 +10,17 @@
 
 <div class="section">
   <div class="container">
-    <%= simple_form_for @cocktail, html: { class: 'form' } do |f| %>
-    <div class="field">
-      <%= f.input :name, label_html: { class: "label" }, input_html: { class: ""
-      } %> 
-      <%= f.input :photo, label_html: { class: "label" }, input_html: {
-      class: "" } %> 
-      <%= f.input :photo_cache, as:
-      :hidden %> 
-      <%= f.submit "Add", class: "button is-dark is-fullwidth" %>
+    <div class="columns is-centered">
+      <div class="column is-half">
+        <%= simple_form_for @cocktail, html: { class: 'form' } do |f| %>
+        <div class="field">
+          <%= f.input :name, label_html: { class: "label" }, input_html: {
+          class: "" } %> <%= f.input :photo, label_html: { class: "label" },
+          input_html: { class: "" } %> <%= f.input :photo_cache, as: :hidden %>
+          <%= f.submit "Add", class: "button is-dark is-fullwidth" %>
+        </div>
+        <% end %>
+      </div>
     </div>
-    <% end %>
   </div>
 </div>

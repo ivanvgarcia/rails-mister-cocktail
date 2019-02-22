@@ -2,9 +2,52 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .cocktail-show {
   &__dose {
+  }
+  &__items {
+    margin: 10px 0;
+    display: flex;
+    transform: translateX(-400px);
+    transition: transform 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    overflow: hidden;
+    opacity: 0;
+    animation: slidein 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  }
+  &__description,
+  &__name {
+    padding: 10px;
+    margin: 10px;
+    transform: skew(10deg);
+    & p {
+      transform: skew(-10deg);
+    }
+  }
+  &__description {
+    background: black;
+    color: white;
+  }
+  &__name {
+    background: yellow;
+    color: black;
+  }
+  &__delete {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+  }
+  & i {
+    color: red;
+    font-size: 18px;
+  }
+}
+
+@keyframes slidein {
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }

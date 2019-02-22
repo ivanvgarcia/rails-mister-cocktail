@@ -17,20 +17,19 @@
       <% @cocktails.each do |cocktail| %>
       <div class="column is-4">
         <div class="card">
-          <%= cl_image_tag cocktail.photo %>
+          <%= cl_image_tag cocktail.photo, height: 300, width: 400, crop: :fill %>
 
           <div class="card-body">
             <div class="card-title">
               <%= cocktail.name %>
             </div>
-            <div>
-              <%= link_to 'See it', cocktail_path(cocktail), class: "button
+            <div class="card-button">
+              <%= link_to 'Drink Up!', cocktail_path(cocktail), class: "button
               is-primary has-text-dark" %>
             </div>
           </div>
-        
-            <%= image_tag 'cocktail.png', class: "card-icon" %>
-       
+
+          <%= image_tag 'cocktail.png', class: "card-icon" %>
         </div>
       </div>
       <% end %>
