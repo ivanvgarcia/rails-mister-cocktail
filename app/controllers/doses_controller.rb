@@ -12,7 +12,8 @@ class DosesController < ApplicationController
     if @dose.save
       redirect_to cocktail_path(@cocktail)
     else
-      render 'new'
+      @ingredients = Ingredient.all.map { |ingredient| ingredient }
+      render :new
     end
   end
 

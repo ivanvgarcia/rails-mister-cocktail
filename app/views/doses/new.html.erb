@@ -13,17 +13,17 @@
     <%= simple_form_for [@cocktail, @dose], html: { class: '' } do |f| %>
     <div class="">
       <div class="">
-        <%= f.input :description, label_html: { class: "" }, input_html: {
+        <%= f.input :description, label_html: { class: "label" }, input_html: {
         class: "" } %>
       </div>
 
       <div class="">
         <%= f.association :ingredient, collection: @ingredients, prompt: "Choose
-        an ingredient..." %>
+        an ingredient...", label_html: { class: "label" } %>
       </div>
 
       <div class="">
-        <%= f.submit "Add Ingredient", class: "" %>
+        <%= f.submit "Add Ingredient", class: "button is-primary has-text-dark" %>
       </div>
     </div>
     <% end %>

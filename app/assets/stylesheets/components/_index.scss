@@ -6,9 +6,11 @@ $white: #f5efed;
 @import 'form';
 @import 'logo';
 @import 'card';
+@import 'navbar';
 
 .title-text {
   padding: 1rem;
   background: $black;
   color: $yellow;
+  font-family: 'coiny', serif;
 }

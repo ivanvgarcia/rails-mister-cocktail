@@ -8,6 +8,17 @@
   </div>
 </section>
 
+<section class="cocktail-show">
+  <div class="columns is-multiline">
+    <div class="column is-half">
+      <%= cl_image_tag @cocktail.photo %>
+    </div>
+    <div class="column is-half">
+      <%= link_to 'Add a Dose', new_cocktail_dose_path(@cocktail) %>
+    </div>
+  </div>
+</section>
+
 <% @cocktail.doses.each do |dose| %>
   <%= dose.description %>
   <%= dose.ingredient.name %>

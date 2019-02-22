@@ -13,8 +13,12 @@
     <%= simple_form_for @cocktail, html: { class: 'form' } do |f| %>
     <div class="field">
       <%= f.input :name, label_html: { class: "label" }, input_html: { class: ""
-      } %> <%= f.input :image_url, label_html: { class: "label" }, input_html: {
-      class: "" } %> <%= f.submit "Add", class: "button is-dark is-fullwidth" %>
+      } %> 
+      <%= f.input :photo, label_html: { class: "label" }, input_html: {
+      class: "" } %> 
+      <%= f.input :photo_cache, as:
+      :hidden %> 
+      <%= f.submit "Add", class: "button is-dark is-fullwidth" %>
     </div>
     <% end %>
   </div>

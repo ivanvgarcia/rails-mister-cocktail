@@ -6,6 +6,10 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Coiny"
+      rel="stylesheet"
+    />
 
     <%= stylesheet_link_tag 'application', media: 'all',
     'data-turbolinks-track': 'reload' %>
@@ -14,9 +18,8 @@
   <body>
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
-        <a class="navbar-item logo-text" href="/">
-          <i class="fa fa-home"></i>
-          Cocktails
+        <a class="navbar-item" href="/">
+          <%= image_tag 'logo.png', class: "logo" %>
         </a>
 
         <a
@@ -34,17 +37,16 @@
 
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-          <a class="navbar-item">
-            Cocktails
+          <a class="navbar-item logo-text">
+            Bebidas
           </a>
         </div>
 
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="buttons">
-              <a class="button is-light">
-                Add Cocktail
-              </a>
+              <%= link_to 'Anadir Bebida', new_cocktail_path, class: "button
+              is-info" %>
             </div>
           </div>
         </div>
