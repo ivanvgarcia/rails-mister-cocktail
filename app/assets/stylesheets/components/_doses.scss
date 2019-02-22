@@ -5,6 +5,19 @@
   flex-direction: column;
 }
 
+.hero-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  & .title {
+    margin: 0;
+  }
+  & i {
+    font-size: 40px;
+    color: red;
+  }
+}
+
 .cocktail-show {
   &__dose {
   }
