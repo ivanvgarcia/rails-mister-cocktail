@@ -4,7 +4,11 @@ class CocktailsController < ApplicationController
     @cocktails = Cocktail.all
   end
 
-  def show; end
+  def show
+    @like = Like.new
+    
+
+  end
 
   def new
     @cocktail = Cocktail.new

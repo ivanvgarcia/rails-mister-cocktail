@@ -1,3 +1,8 @@
+.align-center {
+  display: flex;
+  align-items: center;
+}
+
 .center-content {
   display: flex;
   justify-content: center;
@@ -15,6 +20,18 @@
   & i {
     font-size: 40px;
     color: red;
+  }
+  & .hero-actions {
+    & i {
+      color: red;
+      font-size: 26px;
+    }
+    & .hero-likes {
+      & button {
+        border: none;
+        background: none;
+      }
+    }
   }
 }
 
@@ -51,10 +68,6 @@
     padding: 10px;
     display: flex;
     align-items: center;
-  }
-  & i {
-    color: red;
-    font-size: 18px;
   }
 }
 

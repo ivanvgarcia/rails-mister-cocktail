@@ -4,10 +4,21 @@
       <h1 class="title has-text-dark">
         Make a <span class="title-text"><%= @cocktail.name %></span>
       </h1>
-      <h4>
-        <%= link_to cocktail_path(@cocktail), method: "delete" do %> <%=
-        fa_icon"times" %> <% end %>
-      </h4>
+      <div class="hero-actions align-center">
+        <div class="hero-likes align-center">
+          <p class="has-text-dark is-size-5"><%= @cocktail.likes.length %> people love <%= @cocktail.name %></p>  
+          <%= simple_form_for [@cocktail, @like] do |f| %>  
+             <%= button_tag(type: 'submit', class: "button") do %>
+                <%= fa_icon "heart" %>
+              <% end %>
+          <% end %>
+          
+        </div>
+        <h4>
+          <%= link_to cocktail_path(@cocktail), method: "delete" do %> <%=
+          fa_icon "times" %> <% end %>
+        </h4>
+      </div>
     </div>
   </div>
 </section>
