@@ -4,11 +4,8 @@ class LikesController < ApplicationController
     @like = Like.new
     @like.like = true
     @like.cocktail = @cocktail
-    if @like.save
-      redirect_to cocktail_path(@cocktail)
-    else
-      redirect_to cocktail_path(@cocktail)
-    end
+    @like.save
+    redirect_to cocktail_path(@cocktail)
   end
 
   private
