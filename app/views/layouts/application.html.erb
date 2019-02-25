@@ -11,8 +11,7 @@
       rel="stylesheet"
     />
 
-    <%= stylesheet_link_tag 'application', media: 'all',
-    'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
@@ -46,15 +45,24 @@
           <div class="navbar-item">
             <div class="buttons">
               <%= link_to 'Add Cocktail', new_cocktail_path, class: "button
-              is-info" %>
+              is-info" %> 
+              <% if user_signed_in? %> 
+                <%= current_user.email %>
+                <%= link_to 'Logout', destroy_user_session_path, class: "button is-info", method: "delete" %>
+              <% else %> 
+                <%= link_to 'Sign up', new_user_registration_path, class: "button is-primary has-text-dark" %> 
+                <%= link_to 'Login', new_user_session_path, class: "button is-info" %> 
+              <% end %>
             </div>
           </div>
         </div>
       </div>
     </nav>
-    <%= yield %> <%= javascript_include_tag 'application',
-    'data-turbolinks-track': 'reload' %> <%= javascript_pack_tag "application"
-    %>
+
+    <%= yield %> 
+
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %> 
+    <%= javascript_pack_tag "application" %>
     <!-- from app/javascript/packs/application.js -->
   </body>
 </html>
