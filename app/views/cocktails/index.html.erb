@@ -10,21 +10,8 @@
     </div>
   </div>
 </section>
-<% if notice %>
-<div class="notification is-success" role="alert">
-  <button type="button" class="delete" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-  <%= notice %>
-</div>
-<% end %> <% if alert %>
-<div class="notification is-danger" role="alert">
-  <button type="button" class="delete" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-  <%= alert %>
-</div>
-<% end %>
+
+<%= render 'message/notifications' %>
 
 <section class="section">
   <div class="container">
