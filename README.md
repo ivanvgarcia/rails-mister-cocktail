@@ -1,24 +1,10 @@
-# README
+# Bebidas
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Bebidas, a RoR app created by Ivan Garcia. 
 
-Things you may want to cover:
+Users can:
 
-* Ruby version
+* Add their favorite cocktails and upload the drink's image.
+* Add the ingredients for the drinks.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+More features coming soon...

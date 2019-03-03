@@ -67,3 +67,10 @@ gem 'better_errors'
 gem 'binding_of_caller'
 gem "bulma-rails", "~> 0.7.4"
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+gem 'dotenv-rails', groups: [:development, :test]
+gem 'cloudinary', '~> 1.9.1'
+gem 'carrierwave', '~> 1.2'
+gem 'devise'
+
+
+
